@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import re
 
 from sklearn.preprocessing import LabelEncoder
@@ -10,6 +11,14 @@ from nltk import pos_tag, RegexpParser
 
 #Lemmatize
 from nltk.stem import WordNetLemmatizer, PorterStemmer
+
+def one_hot_hash(samples, dimensionality, max_length):
+    results = np.zeros((len(samples), max_length, dimensionality))
+    for i, sample in enumerate(samples):
+        for j, word in list(enumerate(sample.split()))[:max_length]:
+            index = abs(hash(word)) % dimensionality
+            results[i, j, index] = 1
+
 
 def Tokenize(string): 
     return word_tokenize(string)

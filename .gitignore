@@ -1,0 +1,8 @@
+acllmdb/
+globe.6B/
+**/*.ipynb
+**/*.csv
+
+#Mac
+**/*.DS_Store
+.DS_Store
