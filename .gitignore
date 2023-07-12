@@ -6,3 +6,11 @@ globe.6B/
 #Mac
 **/*.DS_Store
 .DS_Store
+
+#Folders
+/Data
+/tensorflow-1-public
+
+#Pycache
+/deep_learning/__pycache__
+/nltk_functions/__pycache__
